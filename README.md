@@ -76,23 +76,21 @@ Simply open `index.html` in your browser to preview the resume site locally.
 
 ```
 my-cloud-resume-crc/
+├── README.md
 ├── index.html
+├── my-cloud-resume-crc.html
 ├── css/
-│   └── styles.css
-├── js/
-│   └── main.js
-├── backend/
-│   └── (Python scripts or Lambda functions)
-├── assets/
-│   └── images, icons, etc.
-└── README.md
+│   └── my-cloud-resume-crc-style.css
+├── components/
+│   ├── dynamodb.json
+│   ├── lambda_fucntion.py
+│   └── visitor-counter.js
 ```
-
-- `index.html`: Main entry point of the website
-- `css/`: All styling files
-- `js/`: JavaScript for interactive features
-- `backend/`: Python code for serverless functions (e.g., visitor counter)
-- `assets/`: Images and other assets
+## Legend
+- README.md: Project documentation and instructions
+- index.html `my-cloud-resume-crc.html`: Main HTML files for the resume website
+- css/Styling files (CSS)
+- components/: Cloud/backend integration code (Lambda, DynamoDB policy, visitor counter JS)
 
 ## Deployment
 
