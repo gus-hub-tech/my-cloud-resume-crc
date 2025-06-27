@@ -25,7 +25,7 @@ This repository contains the source code for a personal resume website, designed
 
 ## Components
 - Static Website Hosting : Serves all frontend files (`index.html`, CSS, JS, assets) from a cloud storage bucket.
-- Frontend**: HTML, CSS, JS for the interactive resume.
+- Frontend: HTML, CSS, JS for the interactive resume.
 - Serverless Backend: API Gateway + Lambda function(s) (Python, in `backend/`) for features like the visitor counter.
 - Database: DynamoDB to store and retrieve the visitor count.
 
