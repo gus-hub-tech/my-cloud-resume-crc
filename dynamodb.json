@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "UpdateDynamoDB",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:UpdateItem",
+                "dynamodb:Scan"
+            ],
+            "Resource": "arn:aws:dynamodb:af-south-1:705001907888:table/VisitorCount"
+        }
+    ]
+}
