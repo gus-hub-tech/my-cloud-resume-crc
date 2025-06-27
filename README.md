@@ -19,6 +19,18 @@ Welcome to **My Cloud Resume CRC**! This project is a cloud-based resume website
 
 This repository contains the source code for a personal resume website, designed as a cloud project following the [Cloud Resume Challenge (CRC)](https://cloudresumechallenge.dev/). The site presents your resume in an interactive and visually appealing format, leveraging cloud technologies for deployment and scalability.
 
+## 🗂️ Architecture Diagram [pending...]
+
+
+
+## Components
+- Static Website Hosting**: Serves all frontend files (`index.html`, CSS, JS, assets) from a cloud storage bucket.
+- Frontend**: HTML, CSS, JS for the interactive resume.
+- Serverless Backend (Optional)**: API Gateway + Lambda function(s) (Python, in `backend/`) for features like the visitor counter.
+- Database (Optional)**: E.g., DynamoDB to store and retrieve the visitor count.
+
+
+
 ## Features
 
 - Responsive and modern design
