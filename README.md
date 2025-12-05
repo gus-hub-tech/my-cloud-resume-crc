@@ -35,9 +35,8 @@ A **serverless cloud resume website** built following the [Cloud Resume Challeng
 ```
 my-cloud-resume-crc/
 ├── README.md                           # Project documentation
-├── index.html                          # Entry point (redirects to main page)
-├── my-cloud-resume-crc.html           # Main resume HTML
-├── my-cloud-resume-crc-style.css      # Styling and responsive design
+├── index.html                          # Main resume HTML page
+├── style.css                           # Styling and responsive design
 └── components/
     ├── dynamodb.json                   # DynamoDB table configuration
     ├── lambda_fucntion.py             # Python Lambda function for visitor counter
