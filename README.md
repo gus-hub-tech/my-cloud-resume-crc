@@ -111,7 +111,7 @@ python3 -m http.server 8080
 
 ## 🌐 Live Demo
 
-**Production URL**:
+**Production URL**: Resources deleted
 
 ## 💰 Cost Estimation
 
