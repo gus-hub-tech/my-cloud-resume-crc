@@ -111,7 +111,9 @@ python3 -m http.server 8080
 
 ## 🌐 Live Demo [Partialy working via link-resources deleted]
 
-**Production URL**: https://dm56q9catmr95.cloudfront.net/
+**Production URL**: 
+
+https://dm56q9catmr95.cloudfront.net/
 
 
 ## 💰 Cost Estimation
