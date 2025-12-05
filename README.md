@@ -109,7 +109,7 @@ python3 -m http.server 8080
 
 **Important**: Visitor counter won't work locally without AWS backend deployment.
 
-## 🌐 Live Demo [Partialy workinng via link-resources deleted]
+## 🌐 Live Demo [Partialy working via link-resources deleted]
 
 **Production URL**: https://dm56q9catmr95.cloudfront.net/
 
