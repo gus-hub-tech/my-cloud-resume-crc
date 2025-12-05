@@ -1,125 +1,122 @@
 # My Cloud Resume CRC
 
-Welcome to **My Cloud Resume CRC**! This project is a cloud-based resume website, designed to showcase your professional experience, skills, and projects using modern web technologies and cloud principles.
+A **serverless cloud resume website** built following the [Cloud Resume Challenge](https://cloudresumechallenge.dev/). This project demonstrates modern cloud architecture using AWS services to create a scalable, cost-effective personal resume site with a visitor counter.
 
-## Table of Contents
+## 🏗️ Architecture
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+**Serverless Architecture Components:**
+- **Frontend**: Static HTML/CSS/JS hosted on AWS S3 + CloudFront
+- **Backend**: AWS Lambda function (Python) for visitor counter API
+- **Database**: DynamoDB for visitor count storage
+- **API**: API Gateway to expose Lambda endpoints
+- **DNS**: Route 53 for custom domain (optional)
+- **Security**: IAM roles and policies for secure access
 
----
+## 🚀 Features
 
-## Project Overview
+- **Fully Serverless**: No servers to manage, pay only for usage
+- **Responsive Design**: Modern CSS with gradient backgrounds and animations
+- **Visitor Counter**: Real-time visitor tracking using Lambda + DynamoDB
+- **Professional Layout**: Clean resume format with skills matrix
+- **Cloud-Native**: Built for AWS deployment from day one
+- **Cost Effective**: Minimal AWS costs (likely under $1/month)
 
-This repository contains the source code for a personal resume website, designed as a cloud project following the [Cloud Resume Challenge (CRC)](https://cloudresumechallenge.dev/). The site presents your resume in an interactive and visually appealing format, leveraging cloud technologies for deployment and scalability.
+## 🛠️ Tech Stack
 
-## 🗂️ Architecture Diagram [pending...]
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Python 3.9+ (AWS Lambda)
+- **Database**: AWS DynamoDB (NoSQL)
+- **Hosting**: AWS S3 + CloudFront CDN
+- **API**: AWS API Gateway (REST)
+- **Infrastructure**: AWS IAM, Route 53
 
-
-
-## Components
-- Static Website Hosting : Serves all frontend files (`index.html`, CSS, JS, assets) from a cloud storage bucket.
-- Frontend: HTML, CSS, JS for the interactive resume.
-- Serverless Backend: API Gateway + Lambda function(s) (Python, in `backend/`) for features like the visitor counter.
-- Database: DynamoDB to store and retrieve the visitor count.
-
-
-
-## Features
-
-- Responsive and modern design
-- Showcases professional experience, education, and skills
-- Live project links and contact information
-- Cloud-friendly structure for easy deployment (e.g., AWS S3, Azure Blob Storage)
-- Optionally includes a visitor counter (using serverless backend)
-
-## Tech Stack
-
-- **HTML**: Structure and layout (66%)
-- **CSS**: Styling and responsive design (26.2%)
-- **JavaScript**: Interactive features (2.4%)
-- **Python**: Backend/serverless functionality (5.4%)  
-  (e.g., API for visitor counter or contact form)
-
-## Getting Started
-
-#### Prerequisites
-
-- [Git](https://git-scm.com/)
-- Basic knowledge of HTML/CSS/JS
-- (Optional) Cloud CLI tools (e.g., AWS CLI, Azure CLI)
-
-#### Clone the Repository
-
-```bash
-git clone https://github.com/gus-hub-tech/my-cloud-resume-crc.git
-cd my-cloud-resume-crc
-```
-
-#### Running Locally
-
-Simply open `index.html` in your browser to preview the resume site locally.
-
-#### Modifying Content
-
-- Update the HTML files with your own resume information.
-- Customize styles in the CSS files.
-- Add or modify interactivity in the JavaScript files.
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 my-cloud-resume-crc/
-├── README.md
-├── index.html
-├── my-cloud-resume-crc.html
-├── css/
-│   └── my-cloud-resume-crc-style.css
-├── components/
-│   ├── dynamodb.json
-│   ├── lambda_fucntion.py
-│   └── visitor-counter.js
+├── README.md                           # Project documentation
+├── index.html                          # Entry point (redirects to main page)
+├── my-cloud-resume-crc.html           # Main resume HTML
+├── my-cloud-resume-crc-style.css      # Styling and responsive design
+└── components/
+    ├── dynamodb.json                   # DynamoDB table configuration
+    ├── lambda_fucntion.py             # Python Lambda function for visitor counter
+    └── visitor-counter.js             # Frontend JS for API calls
 ```
-## Legend
-- README.md: Project documentation and instructions
-- index.html `my-cloud-resume-crc.html`: Main HTML files for the resume website
-- css/Styling files (CSS)
-- components/: Cloud/backend integration code (Lambda, DynamoDB policy, visitor counter JS)
 
-## Deployment
+## 🚀 Deployment Guide
 
-You can deploy this site to popular cloud platforms. Here are some options:
+### Prerequisites
+- AWS Account with appropriate permissions
+- AWS CLI configured
+- Basic knowledge of AWS services
 
-### Deploy to AWS S3 (Static Website Hosting)
+### Step 1: Static Website (S3 + CloudFront)
+1. Create S3 bucket for static hosting
+2. Upload HTML, CSS, JS files
+3. Configure bucket for static website hosting
+4. Set up CloudFront distribution for CDN
+5. Configure custom domain (optional)
 
-1. Build/prepare your site
-2. Upload files to your S3 bucket
-3. Enable static website hosting
-4. (Optional) Set up a custom domain with Route 53
+### Step 2: Serverless Backend
+1. **DynamoDB**: Create table using `components/dynamodb.json`
+2. **Lambda**: Deploy `components/lambda_fucntion.py`
+3. **API Gateway**: Create REST API endpoint
+4. **IAM**: Configure roles and policies
+5. **CORS**: Enable cross-origin requests
 
-### Serverless Backend (Optional)
+### Step 3: Frontend Integration
+- Update `components/visitor-counter.js` with your API Gateway URL
+- Test visitor counter functionality
 
-If using a visitor counter or contact form:
+## 🔧 Local Development
 
-- Deploy Python Lambda functions (see `/backend`)
-- Use API Gateway to expose endpoints
-- Connect frontend JavaScript to the API
+**Note**: This is a serverless application designed for cloud deployment. Local testing requires:
 
-## Contributing
+```bash
+# Clone repository
+git clone https://github.com/gus-hub-tech/my-cloud-resume-crc.git
+cd my-cloud-resume-crc
 
-Contributions are welcome! Please open a pull request or issue to suggest improvements.
+# Start local server (required for CORS)
+python3 -m http.server 8080
 
-## License
+# Visit: http://localhost:8080
+```
 
-This project is licensed under the [MIT License](LICENSE).
+**Important**: Visitor counter won't work locally without AWS backend deployment.
+
+## 🌐 Live Demo
+
+**Production URL**: [main.d28epes9lsan4o.amplifyapp.com](https://main.d28epes9lsan4o.amplifyapp.com/)
+
+## 💰 Cost Estimation
+
+**Monthly AWS Costs** (estimated):
+- S3 Storage: ~$0.02
+- CloudFront: ~$0.10
+- Lambda: ~$0.00 (free tier)
+- DynamoDB: ~$0.00 (free tier)
+- API Gateway: ~$0.00 (free tier)
+- **Total**: < $1.00/month
+
+## 🔒 Security Features
+
+- IAM least-privilege access
+- HTTPS enforced via CloudFront
+- CORS properly configured
+- No hardcoded credentials
+- DynamoDB encryption at rest
+
+## 🤝 Contributing
+
+Contributions welcome! Please open issues or pull requests for:
+- Bug fixes
+- Feature enhancements
+- Documentation improvements
+- Architecture optimizations
 
 ---
 
-**Inspired by the Cloud Resume Challenge.**  
-Happy deploying!
+**Built for the Cloud Resume Challenge**  
+*Demonstrating serverless architecture and AWS cloud skills*
