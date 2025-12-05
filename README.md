@@ -109,9 +109,10 @@ python3 -m http.server 8080
 
 **Important**: Visitor counter won't work locally without AWS backend deployment.
 
-## 🌐 Live Demo
+## 🌐 Live Demo https://dm56q9catmr95.cloudfront.net/
 
-**Production URL**: Resources deleted
+**Production URL**: 
+
 
 ## 💰 Cost Estimation
 
