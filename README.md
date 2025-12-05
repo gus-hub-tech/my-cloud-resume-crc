@@ -111,7 +111,7 @@ python3 -m http.server 8080
 
 ## 🌐 Live Demo
 
-**Production URL**: [main.d28epes9lsan4o.amplifyapp.com](https://main.d28epes9lsan4o.amplifyapp.com/)
+**Production URL**:
 
 ## 💰 Cost Estimation
 
